@@ -5,117 +5,133 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 🇨🇳 v0丨临时丨台湾丨01, server: tt02.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: tw.allzhen.com}
+  - {name: 🇨🇳 v0丨临时丨台湾丨02, server: tt01.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: tw02.kulime.space}
   - {name: 🇭🇰 火箭丨香港丨三网直连丨2, server: hk07.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: safwv07dawjncwsdc.kulime.space}
   - {name: 🇭🇰 火箭丨香港丨三网直连丨6, server: az06dcjhh.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: az06kdhcbsja.kulime.space}
   - {name: 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF, server: st01.alljie.space, port: 52004, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: tw02.kulime.space}
-  - {name: 🇯🇵 火箭丨日本丨深日中继NF, server: srzhongji.alljie.space, port: 52014, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: gujspaskjnc.kulime.space}
-  - {name: 🇺🇸 火箭丨美国丨洛杉矶丨直连NF, server: azus06.alljie.space, port: 11153, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: us03.allzhen.com}
-  - {name: 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF, server: bgpwr.alljie.space, port: 11152, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: hk05.allzhen.com}
-  - {name: 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF, server: guangzhou.alljie.space, port: 52100, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: hk05.allzhen.com}
+  - {name: 🇯🇵 火箭丨日本丨原生丨深日NF, server: srzhongji.alljie.space, port: 52014, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: gujspaskjnc.kulime.space}
+  - {name: 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连, server: azus06.alljie.space, port: 11153, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: us03.allzhen.com}
+  - {name: 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF, server: bgpwr.alljie.space, port: 11152, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: hk05.allzhen.com}
+  - {name: 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF, server: guangzhou.alljie.space, port: 52100, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: hk05.allzhen.com}
   - {name: 🇭🇰 火箭丨香港丨微軟丨广州NF, server: guang01.alljie.space, port: 32370, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: hk05.allzhen.com}
-  - {name: 🇺🇸 火箭丨美国丨CN2丨02丨原生NF, server: us02.alljie.space, port: 32400, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: us03.allzhen.com}
+  - {name: 🇺🇸 火箭丨美国丨CN2丨02丨原生, server: us02.alljie.space, port: 32400, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: us03.allzhen.com}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -138,15 +154,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇨🇳 v0丨临时丨台湾丨01
+      - 🇨🇳 v0丨临时丨台湾丨02
       - 🇭🇰 火箭丨香港丨三网直连丨2
       - 🇭🇰 火箭丨香港丨三网直连丨6
       - 🇨🇳 火箭丨台湾丨原生丨深台中继丨1NF
-      - 🇯🇵 火箭丨日本丨深日中继NF
-      - 🇺🇸 火箭丨美国丨洛杉矶丨直连NF
-      - 🇭🇰 火箭丨香港丨BGP中继丨02丨1GbpsNF
-      - 🇭🇰 火箭丨香港丨HGC丨原生丨中继NF
+      - 🇯🇵 火箭丨日本丨原生丨深日NF
+      - 🇺🇸 火箭丨美国丨洛杉矶丨原生丨直连
+      - 🇭🇰 火箭丨香港丨BGP中继丨02丨HKT丨1GNF
+      - 🇭🇰 火箭丨香港丨HGC丨原生丨移动NF
       - 🇭🇰 火箭丨香港丨微軟丨广州NF
-      - 🇺🇸 火箭丨美国丨CN2丨02丨原生NF
+      - 🇺🇸 火箭丨美国丨CN2丨02丨原生
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
