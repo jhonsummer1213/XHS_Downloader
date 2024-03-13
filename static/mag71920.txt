@@ -5,8 +5,8 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: v0丨临时丨备用1, server: tt02.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8999, sni: tw.allzhen.com}
-  - {name: v0丨临时丨备用2, server: tt01.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8999, sni: tw02.kulime.space}
+  - {name: v0丨临时丨备用1, server: tt02.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: tw.allzhen.com}
+  - {name: v0丨临时丨备用2, server: tt01.alljie.space, port: 443, type: trojan, password: 581e9e15-b8d4-33dd-82f8-be8b18706af8, sni: tw02.kulime.space}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
